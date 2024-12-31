@@ -1,4 +1,4 @@
-<p>{{ correct }} correct!</p>
+<p>{{ correct }} correct! After {{ swaps }} swap(s).</p>
 <div style="display: flex; flex-direction: row; flex-wrap: wrap">
   @for (current of currentOrder; track current; let ndx = $index) {
     <div style="display: flex; flex-direction: column" class="item">
@@ -12,7 +12,7 @@
           ngSrc="/xmas-xchange/gift{{ current }}.png"
           width="120"
           height="120"
-          alt="gift {{ ndx }}"
+          alt="gift {{ current }}"
         />
       </button>
     </div>

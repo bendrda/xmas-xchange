@@ -22,6 +22,7 @@ export class AppComponent {
   receivers = ['Aaron', 'Jess', 'Ben', 'Katie', 'Cory', 'Allie'];
   correctOrder = shuffleArray([0, 1, 2, 3, 4, 5]);
   currentOrder = [0, 1, 2, 3, 4, 5];
+  swaps: number = 0;
 
   clickGift(ndx: number) {
     if (typeof this.selected !== 'undefined') {
@@ -32,6 +33,7 @@ export class AppComponent {
         this.currentOrder[ndx] = this.currentOrder[this.selected];
         this.currentOrder[this.selected] = tmp;
         delete this.selected;
+        this.swaps++;
       }
     } else {
       this.selected = ndx;
